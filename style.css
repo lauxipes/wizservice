@@ -5,9 +5,8 @@ body {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #0f1f10, #1a3521);
-  color: #eee; /* исправил на валидный цвет вместо #eeeii */
+  color: #eee;
   overflow-x: hidden;
-  -webkit-text-size-adjust: 100%; /* отключаем автоувеличение текста на iOS */
 }
 
 /* Хедер и логотип */
@@ -23,9 +22,8 @@ header {
 }
 
 .logo-block img {
-  max-width: 100%;
-  height: auto;
-  max-height: 100px; /* ограничиваем высоту */
+  width: 200px;
+  height: 100px;
   filter: drop-shadow(0 0 5px #7bd175);
   transition: transform 0.4s ease;
   cursor: pointer;
@@ -36,167 +34,35 @@ header {
   filter: drop-shadow(0 0 10px #a0e77a);
 }
 
-/* Навигация */
+/* Навигация — сетка 2x2 под логотипом */
 
 nav {
-  background: linear-gradient(135deg, #1a3521, #0f1f10);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
   justify-content: center;
-  gap: 15px; /* убрал слишком большой gap, чтобы поместилось на узких экранах */
-  padding: 12px 5px; /* немного уменьшил паддинги */
-  box-shadow: inset 0 -2px 8px rgba(30, 70, 30, 0.6);
+  padding: 15px 20px;
   margin-bottom: 30px;
+  max-width: 720px;
+  background: linear-gradient(135deg, #1a3521, #0f1f10);
   border-radius: 0 0 15px 15px;
-  flex-wrap: wrap; /* чтобы меню не ломалось на маленьких экранах */
+  box-shadow: inset 0 -2px 8px rgba(30, 70, 30, 0.6);
 }
 
 nav a {
   color: #f3f7f2;
   text-decoration: none;
   font-weight: 600;
-  padding: 8px 14px; /* уменьшил паддинги */
+  padding: 12px 22px;
   border-radius: 12px;
   border: 2px solid transparent;
   box-shadow: 0 3px 6px rgba(46, 125, 50, 0.3);
   transition: all 0.3s ease;
-  white-space: nowrap; /* не переносить текст */
-  font-size: 14px; /* чуть уменьшил шрифт */
-}
-
-nav a:hover {
-  background: linear-gradient(135deg, #4db64b, #2f8a3e);
-  border-color: #7bd175;
-  color: #e0ffe1;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(123, 209, 117, 0.9);
-}
-
-nav a.active {
-  background: linear-gradient(135deg, #5eb349, #7bd175);
-  border-color: #a0e77a;
-  color: #f0fff0;
-  font-weight: 700;
-  box-shadow: 0 6px 20px rgba(123, 209, 117, 1);
-}
-
-/* Магическая рамка */
-
-.magic-frame {
-  max-width: 100%;
-  margin: 40px auto;
-  padding: 25px 20px; /* чуть уменьшил padding для мобильных */
-  background: linear-gradient(135deg, #142b1c, #1e3a29);
-  border-radius: 15px;
-  box-shadow:
-    0 0 15px 4px rgba(46, 125, 50, 0.6),
-    inset 0 0 20px 6px rgba(30, 58, 41, 0.8);
-  color: #a3d9a5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.magic-frame::before,
-.magic-frame::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 3px solid #7bd175cc;
-  border-radius: 50% 0 50% 0;
-  box-shadow: 0 0 15px #7bd175cc;
-}
-
-.magic-frame::before {
-  top: 10px;
-  left: 10px;
-  border-bottom: none;
-  border-right: none;
-}
-
-.magic-frame::after {
-  bottom: 10px;
-  right: 10px;
-  border-top: none;
-  border-left: none;
-}
-
-.magic-frame h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  color: #f3f7f2;
-  text-shadow: 0 0 10px #7bd175aa;
-}
-
-/* Кнопки кейсов */
-
-/* Сброс и базовые стили */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #0f1f10, #1a3521);
-  color: #eee;
-  -webkit-text-size-adjust: 100%; /* Отключаем автоувеличение текста на iOS */
-  overflow-x: hidden;
-}
-
-/* Хедер */
-header {
-  background: linear-gradient(135deg, #234a23, #1a3521);
-  padding: 20px;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 15px 15px;
-  box-shadow: 0 4px 10px rgba(20, 70, 20, 0.7);
-}
-
-.logo-block img {
-  max-width: 100%;
-  height: auto;
-  max-height: 100px;
-  filter: drop-shadow(0 0 5px #7bd175);
-  cursor: pointer;
-  transition: transform 0.4s ease;
-}
-
-.logo-block img:hover {
-  transform: scale(1.1) rotate(-3deg);
-  filter: drop-shadow(0 0 10px #a0e77a);
-}
-
-/* Навигация */
-nav {
-  background: linear-gradient(135deg, #1a3521, #0f1f10);
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 12px 5px;
-  box-shadow: inset 0 -2px 8px rgba(30, 70, 30, 0.6);
-  margin-bottom: 30px;
-  border-radius: 0 0 15px 15px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #f3f7f2;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 12px;
-  border: 2px solid transparent;
-  box-shadow: 0 3px 6px rgba(46, 125, 50, 0.3);
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  font-size: 14px;
+  user-select: none;
 }
 
 nav a:hover {
@@ -216,58 +82,60 @@ nav a.active {
 }
 
 /* Магическая рамка */
+
 .magic-frame {
-  max-width: 100%;
+  max-width: 720px;
   margin: 40px auto;
-  padding: 25px 20px;
+  padding: 35px 40px;
   background: linear-gradient(135deg, #142b1c, #1e3a29);
   border-radius: 15px;
   box-shadow:
     0 0 15px 4px rgba(46, 125, 50, 0.6),
     inset 0 0 20px 6px rgba(30, 58, 41, 0.8);
   color: #a3d9a5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
-  box-sizing: border-box;
 }
 
 .magic-frame::before,
 .magic-frame::after {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border: 3px solid #7bd175cc;
   border-radius: 50% 0 50% 0;
   box-shadow: 0 0 15px #7bd175cc;
 }
 
 .magic-frame::before {
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
   border-bottom: none;
   border-right: none;
 }
 
 .magic-frame::after {
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  right: 15px;
   border-top: none;
   border-left: none;
 }
 
 .magic-frame h2 {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #f3f7f2;
   text-shadow: 0 0 10px #7bd175aa;
 }
 
 /* Кнопки кейсов */
+
 .cases-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
@@ -276,14 +144,13 @@ nav a.active {
   background: linear-gradient(145deg, #2b5f29, #1e3a1b);
   color: #cdf0c1;
   border: 2px solid #3d7c34;
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(46, 125, 50, 0.5);
   transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
   user-select: none;
-  font-size: 14px;
 }
 
 .case-btn:hover {
@@ -294,20 +161,20 @@ nav a.active {
 }
 
 /* Детали кейса */
+
 .case-details {
   background: linear-gradient(135deg, #1b2a1b, #234126);
   border: 2px solid #3f7b38;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 20px 25px;
   box-shadow:
     0 0 15px 5px rgba(123, 209, 117, 0.5),
     inset 0 0 15px 5px rgba(46, 125, 50, 0.6);
   color: #c3e6c3;
-  max-width: 100%;
+  max-width: 600px;
   margin: 0 auto 40px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .case-details h3 {
@@ -324,7 +191,7 @@ nav a.active {
 }
 
 .case-details li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -333,6 +200,7 @@ nav a.active {
 }
 
 /* Кнопка заказать */
+
 .parent {
   text-align: center;
 }
@@ -348,9 +216,9 @@ nav a.active {
   box-shadow: 0 6px 12px rgba(123, 209, 117, 0.7);
   transition: background 0.3s ease, transform 0.2s ease;
   user-select: none;
-  font-size: 16px;
-  max-width: 100%;
-  box-sizing: border-box;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .order-btn:hover {
@@ -359,6 +227,7 @@ nav a.active {
 }
 
 /* Футер */
+
 footer {
   text-align: center;
   padding: 15px;
@@ -368,62 +237,45 @@ footer {
   box-shadow: inset 0 1px 3px rgba(46, 125, 50, 0.7);
   border-radius: 15px 15px 0 0;
   user-select: none;
-  box-sizing: border-box;
 }
 
-/* Адаптивность для мобильных */
+/* Адаптивные стили для мобильных (кнопки растягиваются) */
+
 @media (max-width: 480px) {
-  header {
-    padding: 15px 10px;
-  }
-
-  .logo-block img {
-    max-height: 80px;
-    width: auto;
-  }
-
-  nav {
-    gap: 8px;
-    padding: 10px 5px;
-  }
-
-  nav a {
-    padding: 6px 10px;
-    font-size: 13px;
-  }
-
-  .magic-frame {
-    margin: 20px 10px;
-    padding: 20px 15px;
-  }
-
-  .magic-frame h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
   .cases-buttons {
-    gap: 8px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
   }
 
   .case-btn {
-    padding: 7px 12px;
-    font-size: 13px;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.7);
+    transition: background 0.3s ease, transform 0.2s ease;
   }
 
-  .case-details {
-    padding: 15px 15px;
-    font-size: 0.85rem;
+  .case-btn:hover {
+    background: linear-gradient(145deg, #4db64b, #2f8a3e);
+    transform: translateY(-3px);
   }
 
   .order-btn {
-    font-size: 14px;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 16px 0;
+    font-size: 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(123, 209, 117, 0.9);
+    transition: background 0.3s ease, transform 0.2s ease;
   }
 
-  footer {
-    padding: 10px 5px;
-    font-size: 0.8rem;
+  .order-btn:hover {
+    background: linear-gradient(145deg, #5eb349, #7bd175);
+    transform: translateY(-3px);
   }
 }
 
