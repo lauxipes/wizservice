@@ -70,6 +70,16 @@ nav a {
   align-items: center;
   user-select: none;
   cursor: pointer;
+  padding: 12px 22px;
+  font-size: 1rem;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 }
 
 nav a:hover {
@@ -285,5 +295,7 @@ footer {
     transform: translateY(-3px);
   }
 }
+
+
 
 
