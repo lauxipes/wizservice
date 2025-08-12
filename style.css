@@ -103,7 +103,7 @@ nav a.active {
 .magic-frame {
   max-width: 720px;
   margin: 40px auto;
-  padding: 35px 40px;
+  padding: 60px 40px;
   background: linear-gradient(135deg, #142b1c, #1e3a29);
   border-radius: 15px;
   box-shadow:
@@ -303,6 +303,7 @@ footer {
     transform: translateY(-3px);
   }
 }
+
 
 
 
