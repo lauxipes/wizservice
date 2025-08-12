@@ -224,25 +224,32 @@ nav a.active {
 }
 
 .order-btn {
-  display: inline-block;
-  background: linear-gradient(145deg, #3d7c34, #5eb349);
-  color: #e5f6e5;
+  display: inline-flex;           /* flex, чтобы удобно центрировать */
+  justify-content: center;        /* горизонтальное выравнивание */
+  align-items: center;            /* вертикальное выравнивание */
+  width: 180px;                   /* фиксированная ширина (подбери под свой дизайн) */
+  height: 45px;                   /* фиксированная высота */
+  padding: 0 20px;                /* горизонтальные отступы внутри */
+  font-size: 1rem;
   font-weight: 700;
-  padding: 10px 25px;
+  color: #e5f6e5;
+  background: linear-gradient(145deg, #3d7c34, #5eb349);
   border-radius: 8px;
   text-decoration: none;
   box-shadow: 0 6px 12px rgba(123, 209, 117, 0.7);
   transition: background 0.3s ease, transform 0.2s ease;
   user-select: none;
-  font-size: 1rem;
-  white-space: nowrap;
   cursor: pointer;
+  white-space: nowrap;            /* запрет переноса */
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .order-btn:hover {
   background: linear-gradient(145deg, #5eb349, #7bd175);
   transform: translateY(-3px);
 }
+
 
 /* Футер */
 
@@ -296,11 +303,6 @@ footer {
     transform: translateY(-3px);
   }
 }
-
-
-
-
-
 
 
 
