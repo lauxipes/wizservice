@@ -264,6 +264,39 @@ footer {
   user-select: none;
 }
 
+/* Контакты над футером — магический стиль */
+.contacts-block {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 40px 0 20px 0;
+  position: relative;
+}
+
+.contact-btn {
+  position: relative;
+  background: linear-gradient(145deg, #262626, #1c1c1c);
+  color: #ddd;
+  border: 1px solid #444;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(123, 209, 117, 0.3); /* лёгкое свечение */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+  border-color: #7bd175; /* магическая подсветка */
+  color: #f0f0f0;
+  box-shadow: 0 0 12px rgba(123, 209, 117, 0.6); /* усиливаем свечение на ховер */
+  transform: translateY(-1px);
+}
+
 /* Адаптивные стили для мобильных */
 
 @media (max-width: 480px) {
@@ -303,6 +336,7 @@ footer {
     transform: translateY(-3px);
   }
 }
+
 
 
 
