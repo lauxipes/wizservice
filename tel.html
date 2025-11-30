@@ -23,6 +23,7 @@
     <a href="/tel.html" class="active">Телефония</a>
     <a href="/deasign.html">Дизайн</a>
     <a href="/cash.html">Oбнaл</a>
+    <a href="https://t.me/wizard_service" class="wizard-floating-btn">Написать нам</a>
   </nav>
 </div>
 
@@ -103,8 +104,25 @@
   });
 </script>
 
+<script>
+document.querySelector('.contacts-toggle').addEventListener('click', function(e) {
+  e.preventDefault();
+  const popup = document.querySelector('.contacts-popup');
+  popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+});
+
+document.addEventListener('click', function(e) {
+  const popup = document.querySelector('.contacts-popup');
+  const toggle = document.querySelector('.contacts-toggle');
+  if (!popup.contains(e.target) && e.target !== toggle) {
+    popup.style.display = 'none';
+  }
+});
+</script>
+  
 </body>
 </html>
+
 
 
 
