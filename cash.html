@@ -51,8 +51,25 @@
   &copy; 2025 Wizard Service. Все права защищены.
 </footer>
 
+<script>
+document.querySelector('.contacts-toggle').addEventListener('click', function(e) {
+  e.preventDefault();
+  const popup = document.querySelector('.contacts-popup');
+  popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+});
+
+document.addEventListener('click', function(e) {
+  const popup = document.querySelector('.contacts-popup');
+  const toggle = document.querySelector('.contacts-toggle');
+  if (!popup.contains(e.target) && e.target !== toggle) {
+    popup.style.display = 'none';
+  }
+});
+</script>
+  
 </body>
 </html>
+
 
 
 
