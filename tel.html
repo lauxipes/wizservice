@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <title>Телефония — Wizard Service</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon -->
-  <link rel="icon" href="/faction.png?v=2" type="image/png">
 </head>
-<body>
+<body class="design-page">
 
 <header>
   <div class="logo-block">
@@ -18,110 +16,73 @@
 
 <div class="menu-container">
   <nav>
-    <a href="/">Главная</a>
-    <a href="/deasign.html">Дизайн</a>
-    <a href="/tel.html" class="active">Телефония</a>
-    <a href="/policy.html">Политика сервиса</a>
-    <a href="/cash.html">Oбнaл</a>
+    <a href="index.html">Главная</a>
+    <a href="deasign.html">Дизайн</a>
+    <a href="tel.html"class="active">Телефония</a>
+    <a href="policy.html">Политика сервиса</a>
+    <a href="cash.html">Обнал</a>
     <a href="https://t.me/wizard_service" class="wizard-floating-btn">Написать нам</a>
   </nav>
 </div>
 
 <main>
-
   <section class="magic-frame">
     <h2>Voice over IP Billing</h2>
-    
-    <div class="cases-buttons">
-      <button class="case-btn" data-case="1">GSM SIP</button>
-      <button class="case-btn" data-case="2">GSM second</button>
-      <button class="case-btn" data-case="3">White</button>
-      <button class="case-btn" data-case="4">Forex</button>
-    </div>
-  
-    <div class="case-details" id="case-1" style="display:none;">
-      <h3>GSM SIP</h3>
-      <ul>
-        <li><strong>Информация:</strong> Mobile phone | Sip - Sip 🇷🇺</li>
-        <li><strong>Прайс:</strong> Обращайтесь в личные сообщения, для уточнения свободных мест.</li>
-        <li><strong>Статус:</strong> В наличие</li>
-      </ul>
-      <a href="https://t.me/wizard_service" target="_blank" class="order-btn">Подключить</a>
-    </div>
-  
-    <div class="case-details" id="case-2" style="display:none;">
-      <h3>GSM second</h3>
-      <ul>
-        <li><strong>Информация:</strong> Mobile phone | Tariff: second (по сек). Geolocation: 🇷🇺 🇰🇿</li>
-        <li><strong>Прайс:</strong> Обращайтесь в личные сообщения, для уточнения свободных мест.</li>
-        <li><strong>Статус:</strong> В наличие</li>
-      </ul>
-      <a href="https://t.me/wizard_service" target="_blank" class="order-btn">Подключить</a>
-    </div>
-  
-    <div class="case-details" id="case-3" style="display:none;">
-      <h3>White</h3>
-      <ul>
-        <li><strong>Информация:</strong> VoIP phone White 🇷🇺 🇰🇿</li>
-        <li><strong>Прайс:</strong> Обращайтесь в личные сообщения, для уточнения свободных мест.</li>
-        <li><strong>Статус:</strong> В наличие</li>
-      </ul>
-      <a href="https://t.me/wizard_service" target="_blank" class="order-btn">Подключить</a>
-    </div>
-  
-    <div class="case-details" id="case-4" style="display:none;">
-      <h3>Forex</h3>
-      <ul>
-        <li><strong>Информация:</strong> Foreign Exchange</li>
-        <li><strong>Прайс:</strong> Обращайтесь в личные сообщения, для уточнения цены.</li>
-        <li><strong>Статус:</strong> В наличие</li>
-      </ul>
-      <a href="https://t.me/wizard_service" target="_blank" class="order-btn">Подключить</a>
+
+    <div class="countries-grid">
+      <!-- Первый ряд: Россия + Узбекистан -->
+      <div class="country-pair">
+        <div class="country-block">
+          <div class="country-name">RUSSIA</div>
+          <div class="slots-container">
+            <div class="slot">GSM SIP</div>
+            <div class="slot">GSM + БЕЛАЯ</div>
+            <div class="slot">БЕЛАЯ</div>
+            <div class="slot">ДОМАШНИИ</div>
+            <div class="slot">НОЧНАЯ ТЕЛЕФОНИЯ</div>
+            <div class="slot">FOREX</div>
+          </div>
+        </div>
+
+        <div class="country-block">
+          <div class="country-name">UZBEKISTAN</div>
+          <div class="slots-container">
+            <div class="slot">БЕЛАЯ</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Второй ряд: Казахстан + Беларусь -->
+      <div class="country-pair">
+        <div class="country-block">
+          <div class="country-name">KAZAKHSTAN</div>
+          <div class="slots-container">
+            <div class="slot">БЕЛАЯ</div>
+          </div>
+        </div>
+
+        <div class="country-block">
+          <div class="country-name">BELARUS</div>
+          <div class="slots-container">
+            <div class="slot">БЕЛАЯ</div>
+          </div>
+        </div>
+      </div>
     </div>
 
+<div class="contacts-block">
+  <a href="https://t.me/wizard_service" target="_blank" class="contact-btn">Подключиться</a>
+</div>
+  </section>
 </main>
 
 <footer>
-  &copy; 2025 Wizard Service. Все права защищены.
+  © 2026 Wizard Service. Все права защищены.
 </footer>
 
-<script>
-  const buttons = document.querySelectorAll('.case-btn');
-  const details = document.querySelectorAll('.case-details');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const caseId = 'case-' + button.dataset.case;
-
-      details.forEach(d => {
-        if (d.id === caseId) {
-          d.style.display = d.style.display === 'none' ? 'block' : 'none';
-        } else {
-          d.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
-
-<script>
-document.querySelector('.contacts-toggle').addEventListener('click', function(e) {
-  e.preventDefault();
-  const popup = document.querySelector('.contacts-popup');
-  popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
-});
-
-document.addEventListener('click', function(e) {
-  const popup = document.querySelector('.contacts-popup');
-  const toggle = document.querySelector('.contacts-toggle');
-  if (!popup.contains(e.target) && e.target !== toggle) {
-    popup.style.display = 'none';
-  }
-});
-</script>
-  
 </body>
 </html>
+
 
 
 
