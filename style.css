@@ -393,6 +393,7 @@ footer {
     transform: scale(1.08);
     filter: brightness(1.15);
 }
+
 /* === Страница "Дизайн" — всегда 2 столбца, ровное расположение === */
 .magic-frame {
   max-width: 760px;
@@ -575,6 +576,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
