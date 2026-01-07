@@ -409,11 +409,11 @@ footer {
 }
 
 .design-page .magic-frame h2 {
-  font-size: 1.6rem;
-  margin: 0 0 32px;
   text-align: center;
-  color: #f0fff0;
-  text-shadow: 0 0 10px rgba(123, 209, 117, 0.65);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #f3f7f2;
+  text-shadow: 0 0 10px #7bd175aa;
 }
 
 /* Контейнер всех пар */
@@ -576,6 +576,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
