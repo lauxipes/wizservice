@@ -443,26 +443,23 @@ footer {
 }
 
 .design-page .country-name {
-  font-size: clamp(1.1rem, 4.2vw, 1.35rem);   /* адаптивный размер от ~17px до ~22px */
+  font-size: clamp(1.15rem, 4.5vw, 1.45rem);   /* такой же диапазон размеров, как в других блоках */
   font-weight: 700;
-  color: #b8e0b8;
-  margin-bottom: 14px;
-  text-shadow: 0 0 6px rgba(184, 224, 184, 0.35);
+  color: #b8e0b8;                              /* или тот же цвет, что в других заголовках */
+  text-shadow: 0 0 6px rgba(184, 224, 184, 0.3);
   text-align: center;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
   
-  /* Самое важное для единообразия и контроля: */
-  max-width: 100%;                    /* не даёт вылезти за пределы блока */
+  /* Самое важное — делаем поведение как в других разделах */
+  max-width: 100%;
   width: 100%;
-  line-height: 1.25;                  /* чуть больше воздуха между строками */
-  white-space: normal;                /* разрешаем перенос */
-  overflow-wrap: break-word;          /* переносит длинные слова */
-  word-break: normal;                 /* не режет слова посередине (красивее) */
-  hyphens: auto;                      /* автоматические переносы, где возможно */
-  
-  /* Дополнительная страховка */
-  padding: 0 6px;
-  box-sizing: border-box;
+  white-space: normal;                /* ← убираем nowrap, даём переноситься */
+  overflow-wrap: break-word;          /* ← переносит длинные слова */
+  hyphens: auto;                      /* ← автоматические переносы (очень помогает на русском) */
   display: block;
+  padding: 0 8px;
+  box-sizing: border-box;
 }
 
 /* Контейнер слотов */
@@ -562,10 +559,13 @@ footer {
   }
 }
 
-@media (max-width: 380px) {
-  .magic-frame {
-    padding: 20px 10px;
+@media (max-width: 520px) {
+  .design-page .country-name {
+    font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+    line-height: 1.3;
+    padding: 0 6px;
   }
+}
   
   .design-page .country-pair {
     gap: 20px 12px;
@@ -586,6 +586,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
