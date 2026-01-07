@@ -443,16 +443,26 @@ footer {
 }
 
 .design-page .country-name {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 4.2vw, 1.35rem);   /* адаптивный размер от ~17px до ~22px */
   font-weight: 700;
   color: #b8e0b8;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-shadow: 0 0 6px rgba(184, 224, 184, 0.35);
   text-align: center;
+  
+  /* Самое важное для единообразия и контроля: */
+  max-width: 100%;                    /* не даёт вылезти за пределы блока */
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;                  /* чуть больше воздуха между строками */
+  white-space: normal;                /* разрешаем перенос */
+  overflow-wrap: break-word;          /* переносит длинные слова */
+  word-break: normal;                 /* не режет слова посередине (красивее) */
+  hyphens: auto;                      /* автоматические переносы, где возможно */
+  
+  /* Дополнительная страховка */
+  padding: 0 6px;
+  box-sizing: border-box;
+  display: block;
 }
 
 /* Контейнер слотов */
@@ -576,6 +586,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
