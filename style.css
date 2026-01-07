@@ -393,6 +393,60 @@ footer {
     transform: scale(1.08);
     filter: brightness(1.15);
 }
+/* ──────────────────────────────────────────────── */
+/* Адаптация под мобильные — сохраняем 2 столбца     */
+/* ──────────────────────────────────────────────── */
+
+@media (max-width: 520px) {
+  .magic-frame {
+    margin: 16px auto;
+    padding: 24px 14px;
+  }
+  
+  .design-page .country-pair {
+    gap: 24px 16px;
+  }
+  
+  .design-page .country-name {
+    font-size: 1.15rem;
+  }
+  
+  .design-page .slot {
+    min-width: 50px;
+    height: 28px;
+    font-size: 0.66rem;
+  }
+  
+  .design-page .country-block {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 380px) {
+  .magic-frame {
+    padding: 20px 10px;
+  }
+  
+  .design-page .country-pair {
+    gap: 20px 12px;
+  }
+  
+  .design-page .slot {
+    min-width: 46px;
+    height: 46px;
+    font-size: 0.85rem;
+  }
+  
+  .design-page .country-name {
+    font-size: 1.05rem;
+  }
+  
+  .design-page .contact-btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+}
+
 
 
 
