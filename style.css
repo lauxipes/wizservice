@@ -605,6 +605,24 @@ footer {
 .tg-btn i {
   font-size: 1rem; /* размер иконки */
 }
+/* --- Только для телефонов --- */
+@media (max-width: 480px) {
+  /* Telegram-кнопки и маленькие кнопки */
+  .tg-btn i {
+    font-size: 0.7rem; /* уменьшаем иконку */
+  }
+
+  .small-btn {
+    padding: 3px 6px;   /* меньше padding */
+    font-size: 0.7rem;  /* меньше текст */
+    min-width: 36px;    /* минимальная ширина меньше */
+  }
+
+  .big-btn {
+    padding: 5px 10px;  /* меньше padding */
+    font-size: 0.75rem; /* меньше текст */
+  }
+}
 
 
 
