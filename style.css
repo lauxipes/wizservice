@@ -502,19 +502,6 @@ footer {
   margin: 40px 0 24px;
 }
 
-.design-page .contact-btn {
-  background: linear-gradient(145deg, #262626, #1c1c1c);
-  color: #ddd;
-  border: 1px solid #444;
-  padding: 14px 36px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  box-shadow: 0 0 12px rgba(123, 209, 117, 0.45);
-  transition: all 0.25s ease;
-  text-decoration: none;
-}
-
 .design-page .contact-btn:hover {
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
   border-color: #7bd175;
@@ -577,6 +564,46 @@ footer {
     padding: 12px 32px;
     font-size: 1rem;
   }
+}
+/* 4 ссылки в ряд */
+.links-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap; /* чтобы на мобиле не ломалось */
+}
+
+/* 2 большие кнопки */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Чуть больше размер для нижних кнопок */
+.big-btn {
+  padding: 14px 30px;
+  font-size: 1rem;
+}
+
+/* Маленькие кнопки (4 ссылки) */
+.small-btn {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  min-width: 50px;
+}
+
+.tg-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* расстояние между иконкой и текстом */
+}
+
+.tg-btn i {
+  font-size: 1rem; /* размер иконки */
 }
 
 
