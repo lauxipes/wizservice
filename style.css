@@ -571,7 +571,7 @@ footer {
   justify-content: center;
   gap: 15px;
   margin-bottom: 25px;
-  flex-wrap: wrap; /* чтобы на мобиле не ломалось */
+  flex-wrap: nowrap; /* запрет переноса — ряд не ломается */
 }
 
 /* 2 большие кнопки */
@@ -579,16 +579,16 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* ряд не ломается */
 }
 
-/* Чуть больше размер для нижних кнопок */
+/* Чуть больше размер для нижних кнопок на ПК */
 .big-btn {
   padding: 14px 30px;
   font-size: 1rem;
 }
 
-/* Маленькие кнопки (4 ссылки) */
+/* Маленькие кнопки (4 ссылки) на ПК */
 .small-btn {
   padding: 6px 14px;
   font-size: 0.85rem;
@@ -605,22 +605,66 @@ footer {
 .tg-btn i {
   font-size: 1rem; /* размер иконки */
 }
-/* --- Только для телефонов --- */
-@media (max-width: 480px) {
-  /* Telegram-кнопки и маленькие кнопки */
-  .tg-btn i {
-    font-size: 0.7rem; /* уменьшаем иконку */
-  }
 
+/* === Уменьшаем только текст внутри кнопок на телефоне === */
+@media (max-width: 768px) {
+
+  /* Текст маленьких кнопок */
   .small-btn {
-    padding: 3px 6px;   /* меньше padding */
-    font-size: 0.7rem;  /* меньше текст */
-    min-width: 36px;    /* минимальная ширина меньше */
+    font-size: 0.7rem;   /* меньше текст */
   }
 
+  /* Текст больших кнопок */
   .big-btn {
-    padding: 5px 10px;  /* меньше padding */
-    font-size: 0.75rem; /* меньше текст */
+    font-size: 0.85rem;  /* меньше текст */
+    padding: 10px 12px;
+  }
+
+  /* Кнопки с иконкой */
+  .tg-btn {
+    font-size: 0.50rem;  /* текст внутри кнопки */
+    gap: 4px;             /* расстояние между иконкой и текстом */
+    padding: 5px 10px;
+  }
+
+  .tg-btn i {
+    font-size: 1.0rem;   /* уменьшаем иконку */
+  }
+
+  /* Ряды ссылок и кнопок — сохраняем ровную структуру */
+  .links-row {
+    flex-wrap: nowrap;    /* ряд не ломается */
+    gap: 5px;             /* меньше расстояние между ссылками */
+  }
+
+  .buttons-row {
+    flex-wrap: nowrap;    /* ряд не ломается */
+    gap: 10px;            /* расстояние между большими кнопками */
+    justify-content: center;
+  }
+  .links-row {
+    margin-bottom: 15px;  /* больше пространства между ссылками и кнопками на мобилках */
+  }
+  /* Заголовок по центру и 100% ширины */
+.contacts-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;  /* ПК */
+  margin: 0 0 25px 0;
+}
+
+/* Адаптация для мобильных — более специфично */
+@media (max-width: 768px) {
+  .magic-frame .contacts-title {
+    font-size: 1.4rem !important;  /* точно уменьшает текст */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .magic-frame .contacts-title {
+    font-size: 1.4rem !important;    /* ещё меньше для очень маленьких экранов */
+    margin-bottom: 15px;
   }
 }
 
