@@ -155,16 +155,42 @@ nav a.active {
   text-shadow: 0 0 10px #7bd175aa;
 }
 
+/* Контейнер картинки */
 .magic-image-container {
   display: flex;
   justify-content: center;
   margin-bottom: 15px; /* небольшой отступ от заголовка */
 }
 
+/* Картинка внутри */
 .magic-image-container img {
-  max-width: 500px; /* небольшая картинка */
-  height: auto;
-  border-radius: 6px; /* можно убрать, если не нужно скругление */
+  max-width: 500px; /* ПК */
+  width: 100%;      /* всегда по ширине контейнера */
+  height: auto;     /* сохраняем пропорции */
+  border-radius: 6px; /* скругление, если нужно */
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .magic-image-container img {
+    max-width: 350px; /* меньше для планшета */
+  }
+}
+
+@media (max-width: 480px) {
+  .magic-image-container img {
+    max-width: 350px; /* компактно для телефона */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-btn {
+    width: 180px;       /* фиксированная ширина кнопки */
+    max-width: 80%;     /* если экран меньше — уменьшится автоматически */
+    padding: 8px 12px;  /* уменьшаем внутренние отступы */
+    font-size: 0.85rem; /* уменьшаем текст */
+    border-radius: 6px; /* скругление меньше */
+  }
 }
 /* Кнопки кейсов */
 .cases-buttons {
@@ -685,15 +711,6 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  .order-btn {
-    width: 180px;       /* фиксированная ширина кнопки */
-    max-width: 80%;     /* если экран меньше — уменьшится автоматически */
-    padding: 8px 12px;  /* уменьшаем внутренние отступы */
-    font-size: 0.85rem; /* уменьшаем текст */
-    border-radius: 6px; /* скругление меньше */
-  }
-}
 
 
 
