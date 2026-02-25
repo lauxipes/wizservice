@@ -155,8 +155,18 @@ nav a.active {
   text-shadow: 0 0 10px #7bd175aa;
 }
 
-/* Кнопки кейсов */
+.magic-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* небольшой отступ от заголовка */
+}
 
+.magic-image-container img {
+  max-width: 500px; /* небольшая картинка */
+  height: auto;
+  border-radius: 6px; /* можно убрать, если не нужно скругление */
+}
+/* Кнопки кейсов */
 .cases-buttons {
   display: flex;
   justify-content: center;
@@ -674,6 +684,7 @@ footer {
     margin-bottom: 15px;
   }
 }
+
 
 
 
