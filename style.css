@@ -33,7 +33,6 @@ header {
   transform: scale(1.1) rotate(-3deg);
   filter: drop-shadow(0 0 10px #a0e77a);
 }
-
 /* --- Новый магический контейнер меню --- */
 .menu-container {
   max-width: 520px;
@@ -675,6 +674,7 @@ footer {
     margin-bottom: 15px;
   }
 }
+
 
 
 
