@@ -1,4 +1,6 @@
-/* Общие стили */
+/* ========================= */
+/* ОБЩИЕ СТИЛИ (ПК)        */
+/* ========================= */
 
 body {
   margin: 0;
@@ -10,7 +12,6 @@ body {
 }
 
 /* Хедер и логотип */
-
 header {
   background: linear-gradient(135deg, #234a23, #1a3521);
   padding: 20px;
@@ -34,17 +35,13 @@ header {
   filter: drop-shadow(0 0 10px #a0e77a);
 }
 
-/* Контейнер для меню - центрирует и ограничивает ширину */
-
-/* --- Новый магический контейнер меню --- */
+/* Меню */
 .menu-container {
   max-width: 520px;
   margin: 25px auto;
   padding: 20px;
-
   background: linear-gradient(135deg, #142b1c, #1e3a29);
   border-radius: 15px;
-
   box-shadow:
     0 0 15px 4px rgba(46, 125, 50, 0.6),
     inset 0 0 20px 6px rgba(30, 58, 41, 0.8);
@@ -57,7 +54,6 @@ nav {
   justify-content: center;
 }
 
-/* Первая кнопка (Главная) — по центру */
 nav a:first-child {
   grid-column: 1 / -1;
   justify-self: center;
@@ -78,18 +74,11 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  user-select: none;
-  cursor: pointer;
-  padding: 12px 22px;
-  font-size: 1rem;
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   box-sizing: border-box;
-}
-
+  min-height: 50px;
+  user-select: none;
+  cursor: pointer;
 }
 
 nav a:hover {
@@ -109,19 +98,18 @@ nav a.active {
 }
 
 /* Магическая рамка */
-
 .magic-frame {
-  max-width: 720px;
-  margin: 40px auto;
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #142b1c, #1e3a29);
-  border-radius: 15px;
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, #1a3521, #0f1f10);
+  border-radius: 14px;
   box-shadow:
-    0 0 15px 4px rgba(46, 125, 50, 0.6),
-    inset 0 0 20px 6px rgba(30, 58, 41, 0.8);
+    0 0 12px 4px rgba(46, 125, 50, 0.45),
+    inset 0 0 14px 5px rgba(30, 58, 41, 0.7);
   color: #a3d9a5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .magic-frame::before,
@@ -133,7 +121,6 @@ nav a.active {
   border: 3px solid #7bd175cc;
   border-radius: 50% 0 50% 0;
   box-shadow: 0 0 15px #7bd175cc;
-  text-align: center;
 }
 
 .magic-frame::before {
@@ -158,46 +145,21 @@ nav a.active {
   text-shadow: 0 0 10px #7bd175aa;
 }
 
-/* Контейнер картинки */
+/* Картинки */
 .magic-image-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px; /* небольшой отступ от заголовка */
+  margin-bottom: 15px;
 }
 
-/* Картинка внутри */
 .magic-image-container img {
-  max-width: 500px; /* ПК */
-  width: 100%;      /* всегда по ширине контейнера */
-  height: auto;     /* сохраняем пропорции */
-  border-radius: 6px; /* скругление, если нужно */
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
-/* Мобильные устройства */
-@media (max-width: 768px) {
-  .magic-image-container img {
-    max-width: 350px; /* меньше для планшета */
-  }
-}
-
-@media (max-width: 480px) {
-  .magic-image-container img {
-    max-width: 350px; /* компактно для телефона */
-  }
-}
-
-@media (max-width: 480px) {
-  .order-btn {
-    width: 180px;       /* фиксированная ширина кнопки */
-    max-width: 70%;     /* если экран меньше — уменьшится автоматически */
-    padding: 8px 12px;  /* уменьшаем внутренние отступы */
-    font-size: 0.85rem; /* уменьшаем текст */
-    border-radius: 6px; /* скругление меньше */
-  }
-}
-
-/* Кнопки кейсов */
-
+/* Кейсы */
 .cases-buttons {
   display: flex;
   justify-content: center;
@@ -225,8 +187,6 @@ nav a.active {
   transform: translateY(-3px);
   color: #e0ffe1;
 }
-
-/* Детали кейса */
 
 .case-details {
   background: linear-gradient(135deg, #1b2a1b, #234126);
@@ -266,7 +226,6 @@ nav a.active {
 }
 
 /* Кнопка заказать */
-
 .parent {
   text-align: center;
 }
@@ -292,25 +251,7 @@ nav a.active {
   transform: translateY(-3px);
 }
 
-/* Футер */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-  padding: 15px;
-  background: linear-gradient(135deg, #1a3521, #0f1f10);
-  color: #f3f7f2;
-  font-size: 0.9rem;
-  box-shadow: inset 0 1px 3px rgba(46, 125, 50, 0.7);
-  border-radius: 15px 15px 0 0;
-  user-select: none;
-}
-
-/* Контакты над футером - более мягкие */
-
-/* Контакты над футером — магический стиль */
+/* Контакты */
 .contacts-block {
   display: flex;
   justify-content: center;
@@ -329,7 +270,7 @@ footer {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 0 6px rgba(123, 209, 117, 0.3); /* лёгкое свечение */
+  box-shadow: 0 0 6px rgba(123, 209, 117, 0.3);
   transition: all 0.3s ease;
   text-decoration: none;
   font-size: 0.9rem;
@@ -337,383 +278,240 @@ footer {
 
 .contact-btn:hover {
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
-  border-color: #7bd175; /* магическая подсветка */
+  border-color: #7bd175;
   color: #f0f0f0;
-  box-shadow: 0 0 12px rgba(123, 209, 117, 0.6); /* усиливаем свечение на ховер */
+  box-shadow: 0 0 12px rgba(123, 209, 117, 0.6);
   transform: translateY(-1px);
 }
 
-
-
-/* Адаптивные стили для мобильных */
-
-@media (max-width: 480px) {
-  .cases-buttons {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0 10px;
-  }
-
-  .case-btn {
-    width: 100%;
-    padding: 14px 0;
-    font-size: 18px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.7);
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .case-btn:hover {
-    background: linear-gradient(145deg, #4db64b, #2f8a3e);
-    transform: translateY(-3px);
-  }
-
-  .order-btn {
-    width: 100%;
-    padding: 16px 0;
-    font-size: 20px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 6px 14px rgba(123, 209, 117, 0.9);
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .order-btn:hover {
-    background: linear-gradient(145deg, #5eb349, #7bd175);
-    transform: translateY(-3px);
-  }
+/* Футер */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #1a3521, #0f1f10);
+  color: #f3f7f2;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(46, 125, 50, 0.7);
+  border-radius: 15px 15px 0 0;
+  user-select: none;
 }
 
-/* --- Магическая плавающая кнопка --- */
+/* Магическая плавающая кнопка */
 .wizard-floating-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 9999;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #5d5dff, #9a4dff);
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow:
+      0 0 12px rgba(93, 93, 255, 0.5),
+      0 0 22px rgba(154, 77, 255, 0.4);
+  animation: wizard-float 3s ease-in-out infinite,
+             wizard-glow 2.7s ease-in-out infinite;
+  transition: 0.25s ease;
+}
 
-    /* стиль кнопки как в меню, но с магией */
-    background: linear-gradient(135deg, #5d5dff, #9a4dff);
-    color: #fff;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-size: 16px;
+@keyframes wizard-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
 
+@keyframes wizard-glow {
+  0% {
     box-shadow:
         0 0 12px rgba(93, 93, 255, 0.5),
         0 0 22px rgba(154, 77, 255, 0.4);
-
-    /* магическое движение */
-    animation: wizard-float 3s ease-in-out infinite,
-               wizard-glow 2.7s ease-in-out infinite;
-    transition: 0.25s ease;
-}
-
-/* Плавание */
-@keyframes wizard-float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-}
-
-/* Пульсация свечения */
-@keyframes wizard-glow {
-    0% {
-        box-shadow:
-            0 0 12px rgba(93, 93, 255, 0.5),
-            0 0 22px rgba(154, 77, 255, 0.4);
-    }
-    50% {
-        box-shadow:
-            0 0 22px rgba(93, 93, 255, 0.85),
-            0 0 35px rgba(154, 77, 255, 0.55);
-    }
-    100% {
-        box-shadow:
-            0 0 12px rgba(93, 93, 255, 0.5),
-            0 0 22px rgba(154, 77, 255, 0.4);
-    }
+  }
+  50% {
+    box-shadow:
+        0 0 22px rgba(93, 93, 255, 0.85),
+        0 0 35px rgba(154, 77, 255, 0.55);
+  }
+  100% {
+    box-shadow:
+        0 0 12px rgba(93, 93, 255, 0.5),
+        0 0 22px rgba(154, 77, 255, 0.4);
+  }
 }
 
 .wizard-floating-btn:hover {
-    transform: scale(1.08);
-    filter: brightness(1.15);
+  transform: scale(1.08);
+  filter: brightness(1.15);
 }
 
-/* === Страница "Дизайн" — всегда 2 столбца, ровное расположение === */
-.magic-frame {
-  max-width: 760px;
-  margin: 24px auto;
-  padding: 32px 20px;
-  
-  background: linear-gradient(135deg, #1a3521, #0f1f10);
-  border-radius: 14px;
-  box-shadow: 
-    0 0 12px 4px rgba(46, 125, 50, 0.45),
-    inset 0 0 14px 5px rgba(30, 58, 41, 0.7);
-  color: #a3d9a5;
-}
-
-.design-page .magic-frame h2 {
-  font-size: 1.8rem;
-  margin: 0 0 32px;
-  text-align: center;
-  color: #f0fff0;
-  text-shadow: 0 0 10px rgba(123, 209, 117, 0.65);
-}
-
-/* Контейнер всех пар */
-.design-page .countries-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-/* Каждая пара стран — строго 2 столбца */
-.design-page .country-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 20px;
-  align-items: start;
-  justify-items: center;
-}
-
-/* Блок одной страны */
-.design-page .country-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 360px;
-  min-width: 0;
-}
-
-.design-page .country-name {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #b8e0b8;
-  margin-bottom: 12px;
-  text-shadow: 0 0 6px rgba(184, 224, 184, 0.35);
-  text-align: center;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Контейнер слотов */
-.design-page .slots-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 10px;
-  width: 100%;
-}
-
-/* Больше места для России */
-.design-page .country-block:has(.country-name:contains("RUSSIA")),
-.design-page .country-block:has(.country-name:contains("Russia")) {
-  max-width: 420px;
-}
-
-.design-page .slot {
-  min-width: 56px;
-  height: 30px;
-  padding: 0 4px;
-  background: #172a1d;
-  border: 2px solid #3a7048;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 1px 4px rgba(0,0,0,0.65);
-  transition: all 0.2s ease;
-}
-
-.design-page .slot.active {
-  background: linear-gradient(135deg, #58c04e, #84de84);
-  border-color: #9ee77e;
-  color: white;
-  box-shadow: 0 0 16px rgba(123, 209, 117, 0.9);
-  transform: scale(1.12);
-}
-
-/* Кнопка */
-.design-page .contacts-block {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0 24px;
-}
-
-.design-page .contact-btn:hover {
-  background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
-  border-color: #7bd175;
-  color: #f0f0f0;
-  box-shadow: 0 0 20px rgba(123, 209, 117, 0.8);
-  transform: translateY(-2px);
-}
-
-/* ──────────────────────────────────────────────── */
-/* Адаптация под мобильные — сохраняем 2 столбца     */
-/* ──────────────────────────────────────────────── */
-
-@media (max-width: 520px) {
-  .magic-frame {
-    margin: 16px auto;
-    padding: 24px 14px;
-  }
-  
-  .design-page .country-pair {
-    gap: 24px 16px;
-  }
-  
-  .design-page .country-name {
-    font-size: 1.15rem;
-  }
-  
-  .design-page .slot {
-    min-width: 50px;
-    height: 28px;
-    font-size: 0.66rem;
-  }
-  
-  .design-page .country-block {
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 380px) {
-  .magic-frame {
-    padding: 20px 10px;
-  }
-  
-  .design-page .country-pair {
-    gap: 20px 12px;
-  }
-  
-  .design-page .slot {
-    min-width: 46px;
-    height: 46px;
-    font-size: 0.85rem;
-  }
-  
-  .design-page .country-name {
-    font-size: 1.05rem;
-  }
-  
-  .design-page .contact-btn {
-    padding: 12px 32px;
-    font-size: 1rem;
-  }
-}
-
-/* 4 ссылки в ряд */
+/* Ссылки Telegram — 4 в ряд */
 .links-row {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  flex-wrap: nowrap; /* запрет переноса — ряд не ломается */
+  justify-content: center; /* по центру */
+  gap: 15px;               /* расстояние между ссылками */
+  flex-wrap: wrap;         /* на мобильных переносятся */
+  margin-bottom: 20px;
 }
 
-/* 2 большие кнопки */
+/* Большие кнопки под ссылками — по центру */
 .buttons-row {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap; /* ряд не ломается */
+  justify-content: center; /* по центру */
+  gap: 15px;               /* расстояние между кнопками */
+  flex-wrap: wrap;         /* на мобильных переносятся */
+  margin-bottom: 10px;
 }
 
-/* Чуть больше размер для нижних кнопок на ПК */
-.big-btn {
-  padding: 14px 30px;
-  font-size: 1rem;
-}
-
-/* Маленькие кнопки (4 ссылки) на ПК */
-.small-btn {
-  padding: 6px 14px;
+/* Маленькие кнопки (ссылки) */
+.contact-btn.small-btn {
+  padding: 6px 12px;
   font-size: 0.85rem;
-  min-width: 50px;
-}
-
-.tg-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* расстояние между иконкой и текстом */
-}
-
-.tg-btn i {
-  font-size: 1rem; /* размер иконки */
-}
-
-/* === Уменьшаем только текст внутри кнопок на телефоне === */
-@media (max-width: 768px) {
-
-  /* Текст маленьких кнопок */
-  .small-btn {
-    font-size: 0.7rem;   /* меньше текст */
-  }
-
-  /* Текст больших кнопок */
-  .big-btn {
-    font-size: 0.85rem;  /* меньше текст */
-    padding: 10px 12px;
-  }
-
-  /* Кнопки с иконкой */
-  .tg-btn {
-    font-size: 0.50rem;  /* текст внутри кнопки */
-    gap: 4px;             /* расстояние между иконкой и текстом */
-    padding: 5px 10px;
-  }
-
-  .tg-btn i {
-    font-size: 1.0rem;   /* уменьшаем иконку */
-  }
-
-  /* Ряды ссылок и кнопок — сохраняем ровную структуру */
-  .links-row {
-    flex-wrap: nowrap;    /* ряд не ломается */
-    gap: 5px;             /* меньше расстояние между ссылками */
-  }
-
-  .buttons-row {
-    flex-wrap: nowrap;    /* ряд не ломается */
-    gap: 10px;            /* расстояние между большими кнопками */
-    justify-content: center;
-  }
-  .links-row {
-    margin-bottom: 15px;  /* больше пространства между ссылками и кнопками на мобилках */
-  }
-  /* Заголовок по центру и 100% ширины */
-.contacts-title {
-  width: 100%;
+  min-width: 80px;        /* можно уменьшить для телефона */
   text-align: center;
-  font-size: 1.8rem;  /* ПК */
-  margin: 0 0 25px 0;
 }
 
-/* Адаптация для мобильных — более специфично */
-@media (max-width: 768px) {
-  .magic-frame .contacts-title {
-    font-size: 1.4rem !important;  /* точно уменьшает текст */
-    margin-bottom: 20px;
-  }
+/* Большие кнопки */
+.order-btn.big-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  min-width: 140px;       /* фиксированная ширина */
+  text-align: center;
 }
 
 @media (max-width: 480px) {
-  .magic-frame .contacts-title {
-    font-size: 1.4rem !important;    /* ещё меньше для очень маленьких экранов */
+
+  /* --- Общий шрифт --- */
+  body { font-size: 13px; }
+
+  header {
+    padding: 10px 15px; /* уменьшение верхнего/нижнего отступа */
+  }
+
+  /* Логотип */
+  header .logo-block img {
+    width: 140px;   /* меньше ширина */
+    height: auto;   /* сохраняем пропорции */
+  }
+
+  /* --- Магическая рамка --- */
+  .magic-frame { 
+    margin: 18px auto; 
+    padding: 16px 10px; 
+    max-width: 95%;
+    padding-bottom: 60px; /* можно увеличить, если нужно */
+  }
+  /* --- Заголовки --- */
+  .contacts-title { 
+    width: 100%; 
+    font-size: 1.3rem; 
+    margin: 18px 0 20px; 
+    text-align: center; 
+  }
+
+  /* Если есть другие заголовки внутри рамок */
+  .magic-frame h2,
+  .magic-frame h3 {
+    font-size: 1.5rem;       /* уменьшенный шрифт */
+    margin-top: 35px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  /* --- Меню --- */
+  nav { grid-template-columns: 1fr 1fr; gap: 10px 8px; }
+  nav a { min-width: 90px; padding: 6px; font-size: 0.7rem; text-align: center; }
+  nav a:first-child { min-width: 110px; justify-self: center; }
+
+  /* --- Магическая картинка --- */
+  .magic-image-container img { max-width: 100%; }
+
+  /* --- Кейсы --- */
+  .cases-buttons { flex-direction: column; gap: 8px; padding: 0 6px; }
+  .case-btn { 
+    width: 100%; 
+    padding: 8px 0; 
+    font-size: 0.8rem; 
+    border-radius: 8px; 
+  }
+  .case-details { max-width: 95%; font-size: 0.8rem; padding: 12px 10px; }
+
+  /* --- Кнопка "Заказать" --- */
+  .order-btn { 
+    width: 90%; 
+    padding: 10px 0; 
+    font-size: 0.85rem;
+    border-radius: 8px; 
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* --- Плавающая кнопка --- */
+  .wizard-floating-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    bottom: 14px;
+    right: 10px;
+  }
+
+  /* --- Страница Дизайн --- */
+  .design-page .country-pair { gap: 14px 8px; }
+  .design-page .country-block { max-width: 100%; }
+  .design-page .country-name { font-size: 0.95rem; margin-bottom: 8px; text-align: center; }
+  .design-page .slot { min-width: 42px; height: 24px; font-size: 0.6rem; }
+  .design-page .contacts-block { gap: 6px; margin: 15px 0; }
+  .design-page .contact-btn { padding: 6px 12px; font-size: 0.75rem; }
+
+  /* --- Ряды ссылок и кнопок --- */
+  .small-btn { font-size: 0.65rem; padding: 3px 6px; min-width: 30px; }
+  .big-btn { font-size: 0.75rem; padding: 6px 8px; width: 85%; } /* ещё меньше */
+  .tg-btn { font-size: 0.65rem; gap: 3px; padding: 3px 6px; }
+  .tg-btn i { font-size: 0.8rem; }
+
+  .links-row {
+    gap: 8px;
     margin-bottom: 15px;
   }
+
+  .buttons-row {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Маленькие кнопки */
+  .contact-btn.small-btn {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    min-width: 60px;
+  }
+
+  /* Большие кнопки */
+  .order-btn.big-btn {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+    min-width: 100px;
+  }
 }
+
+  /* --- Футер --- */
+  footer { font-size: 0.8rem; padding: 10px 6px; }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
